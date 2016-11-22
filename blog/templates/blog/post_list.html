@@ -3,7 +3,18 @@
         <title>Hazel's Blog</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <h3>It works!</h3>
+		<div>
+			<h1><a href="/">Django Girls Blog</a></h1>
+			<h3>By Hazel A.</h3>
+		</div>
+		
+		{% for post in posts %}
+		<div>
+			<h2><a href="">{{ post.title}}</a></h1>
+			<p>Published: {{ post.published_date }}</p>
+			<p>{{ post.text|linebreaksbr }}</p>
+			
+		</div>
+		{% endfor %}
     </body>
 </html>
